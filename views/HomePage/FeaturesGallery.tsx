@@ -13,7 +13,7 @@ const TABS = [
     title: 'Find relevant media contacts - multiline title',
     description:
       '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quidem ipsam ratione dicta quis cupiditate consequuntur laborum ducimus iusto velit.</p>',
-    imageUrl: '/demo-illustration-3.png',
+    imageUrl: '/demo-illustration-3.jpg',
     baseColor: '249,82,120',
     secondColor: '221,9,57',
   },

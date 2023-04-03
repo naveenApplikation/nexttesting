@@ -14,15 +14,14 @@ export default function Hero() {
   return (
     <HeroWrapper>
       <Contents>
-        <CustomOverTitle>the coolest, saas product you have ever seen</CustomOverTitle>
-        <Heading>Make your life easier with our SaaS</Heading>
+        {/* <CustomOverTitle>the coolest, saas product you have ever seen</CustomOverTitle> */}
+        <Heading>Unlock the full potential of flexible work and optimise success with data driven insights</Heading>
         <Description>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, tempora qui. Explicabo voluptate iure ipsum molestias
-          repudiandae perspiciatis nostrum praesentium, unde pariatur tempora magni rem. Necessitatibus facilis obcaecati ratione.
+        BlinkTime seamlessly implements the environment for employees to work flexibly without guilt while providing teams with data-driven insights on tailored dashboards.
         </Description>
         <CustomButtonGroup>
           <Button onClick={() => setIsModalOpened(true)}>
-            Subscribe to the newsletter <span>&rarr;</span>
+            Get Started <span>&rarr;</span>
           </Button>
           <NextLink href="#whitepaper" passHref>
             <Button transparent>
@@ -96,7 +95,7 @@ const CustomOverTitle = styled(OverTitle)`
 `;
 
 const Heading = styled.h1`
-  font-size: 7.2rem;
+  font-size: 4.2rem;
   font-weight: bold;
   line-height: 1.1;
   margin-bottom: 4rem;
