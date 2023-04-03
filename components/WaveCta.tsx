@@ -23,11 +23,9 @@ export default function WaveCta() {
         <Container>
           <Title>Ready to use BlinkTime?</Title>
           <Title>Protecting and spearheading the future of work</Title>
- 
+
           <CustomButtonGroup>
-            <Button onClick={() => setIsModalOpened(true)}>
-            Let's Talk ? 
-            </Button>
+            <Button onClick={() => setIsModalOpened(true)}>Let's Talk ?</Button>
             {/* <NextLink href="/features" passHref>
               <OutlinedButton transparent>
                 Features <span>&rarr;</span>
@@ -53,7 +51,6 @@ const CtaWrapper = styled.div`
 const Title = styled(SectionTitle)`
   color: rgb(var(--textSecondary));
   margin-bottom: 4rem;
-  
 `;
 
 const OutlinedButton = styled(Button)`

@@ -29,13 +29,16 @@ export default function Homepage({ posts }: InferGetStaticPropsType<typeof getSt
           <Partners />
           <BasicSection imageUrl="/demo-illustration-1.svg" title="For employers." overTitle="For employers">
             <p>
-         
-             Transform your workplace and achieve business success with BlinkTime - our solution empowers your employees with flexibility, increasing productivity, retention and recruitment while providing innovative data-driven insights on tailored dashboards at all levels of your organisation.
+              Transform your workplace and achieve business success with BlinkTime - our solution empowers your employees with flexibility,
+              increasing productivity, retention and recruitment while providing innovative data-driven insights on tailored dashboards at
+              all levels of your organisation.
             </p>
           </BasicSection>
           <BasicSection imageUrl="/demo-illustration-2.svg" title="For employees" overTitle="For employees" reversed>
             <p>
-            Flex your working hours around personal activities without the stigma. Whether you're doing yoga, lifting weights, walking the dog, or grabbing a coffee, add BlinkTime to your diary to protect the time and measure your activity against goals you set yourself.
+              Flex your working hours around personal activities without the stigma. Whether you're doing yoga, lifting weights, walking the
+              dog, or grabbing a coffee, add BlinkTime to your diary to protect the time and measure your activity against goals you set
+              yourself.
             </p>
             {/* <ul>
               <li>Professional point 1</li>
