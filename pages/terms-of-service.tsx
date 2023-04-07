@@ -4,7 +4,7 @@ import RichText from 'components/RichText';
 
 export default function ContactPage() {
   return (
-    <Page title="Cookies policy">
+    <Page title="Terms of Service">
       <CookiesPolicyContainer>
         <RichText>
           <div className="row">

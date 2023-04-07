@@ -17,7 +17,8 @@ export default function Hero() {
         {/* <CustomOverTitle>the coolest, saas product you have ever seen</CustomOverTitle> */}
         <Heading>Unlock the full potential of flexible work and optimise success with data driven insights</Heading>
         <Description>
-        BlinkTime seamlessly implements the environment for employees to work flexibly without guilt while providing teams with data-driven insights on tailored dashboards.
+          BlinkTime seamlessly implements the environment for employees to work flexibly without guilt while providing teams with
+          data-driven insights on tailored dashboards.
         </Description>
         <CustomButtonGroup>
           <Button onClick={() => setIsModalOpened(true)}>

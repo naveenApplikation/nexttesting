@@ -34,8 +34,8 @@
 ## Table Of Contents
 
 - [Features](#-features)
-- [Getting Started](#-getting-started)  
-- [One click deploy](#one-click-deploy)  
+- [Getting Started](#-getting-started)
+- [One click deploy](#one-click-deploy)
 - [Built With](#-built-with)
 - [Contributing](#-contributing)
   - [Creating A Pull Request](#creating-a-pull-request)
@@ -61,7 +61,7 @@
 ## 🤓 Getting Started
 
 - Click `Use the template` or [this link](https://github.com/Blazity/next-saas-starter/generate)
-- Setup your [sendgrid](https://sendgrid.com/) API key and add it to environment variables (`SENDGRID_API_KEY` - `.env.local`)
+- Setup your [sendgrid](https://sendgrid.com/) API key and add it to environment variables (`MAILJET_API_KEY` - `.env.local`)
 - Adjust the template to your needs (and checkout `env.ts` file)
 - Deploy the project on [Vercel](https://vercel.com/) **don't forget to add env variables**
 - _(optional)_ Create [Tina Cloud account](https://app.tina.io/), [a project](https://tina.io/docs/tina-cloud/) and fill these `NEXT_PUBLIC_ORGANIZATION_NAME`, `NEXT_PUBLIC_TINA_CLIENT_ID` env vars with proper values

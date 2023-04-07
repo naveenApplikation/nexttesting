@@ -27,11 +27,12 @@ export default function FormSection() {
         },
         body: JSON.stringify({ subject: 'Email from contact form', ...payload }),
       });
-
+      console.log('test', res.body);
       if (res.status !== 204) {
         setHasErrored(true);
       }
-    } catch {
+    } catch (error) {
+      console.log(error);
       setHasErrored(true);
       return;
     }

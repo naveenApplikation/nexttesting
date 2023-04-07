@@ -1,28 +1,42 @@
+import { result } from 'lodash';
 import { NextApiRequest, NextApiResponse } from 'next';
 
-const sgMail = require('@sendgrid/mail');
+// const sgMail = require('@sendgrid/mail');
+const Mailjet = require('node-mailjet');
 
 export default async function SendEmail(req: NextApiRequest, res: NextApiResponse) {
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
   const { subject, description, email, name } = req.body;
   const referer = req.headers.referer;
-
-  const content = {
-    to: ['contact@bstefanski.com'],
-    from: 'contact@bstefanski.com',
-    subject: subject,
-    text: description,
-    html: `<div>
-    <h1>Name: ${name}</h1>
-    <h1>E-mail: ${email}</h1>
-    <p>${description}</p>
-    <p>Sent from: ${referer || 'Not specified or hidden'}`,
-  };
-
+  const mailjet = new Mailjet({
+    apiKey: process.env.MAILJET_API_KEY,
+    apiSecret: process.env.MAILJET_SECRET,
+  });
   try {
-    await sgMail.send(content);
-    res.status(204).end();
+    const request = await mailjet.post('send', { version: 'v3.1' }).request({
+      Messages: [
+        {
+          From: {
+            Email: 'sales@blinktime.io',
+          },
+          To: [
+            {
+              Email: 'sales@blinktime.io',
+              Name: name,
+            },
+          ],
+
+          Subject: subject,
+          TextPart: description,
+          HTMLPart: `<div>
+          <h1>Name: ${name}</h1>
+          <h1>E-mail: ${email}</h1>
+          <p>${description}</p>
+          <p>Sent from: ${referer || 'Not specified or hidden'}`,
+        },
+      ],
+    });
+
+    res.status(204).send({ message: request.response.data });
   } catch (error) {
     console.log('ERROR', error);
     res.status(400).send({ message: error });

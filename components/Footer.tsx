@@ -1,8 +1,9 @@
 import NextLink from 'next/link';
-import { FacebookIcon, LinkedinIcon, TwitterIcon } from 'react-share';
+import { FacebookIcon, LinkedinIcon, TwitterIcon, InstapaperIcon } from 'react-share';
 import styled from 'styled-components';
 import Container from 'components/Container';
 import { media } from 'utils/media';
+import { SocialIcon } from 'react-social-icons';
 
 type SingleFooterListItem = { title: string; href: string };
 type FooterListItems = SingleFooterListItem[];
@@ -14,7 +15,9 @@ const footerItems: FooterItems = [
     title: 'Company',
     items: [
       { title: 'Privacy Policy', href: '/privacy-policy' },
-      { title: 'Cookies Policy', href: '/cookies-policy' },
+      // { title: 'Cookies Policy', href: '/cookies-policy' },
+      { title: 'Terms of Service', href: '/terms-of-service' },
+      { title: 'GDPR', href: '/gdpr' },
     ],
   },
   {
@@ -57,25 +60,21 @@ export default function Footer() {
         </ListContainer>
         <BottomBar>
           <ShareBar>
-            <NextLink href="https://www.twitter.com/my-saas-startup" passHref>
-              <a>
-                <TwitterIcon size={50} round={true} />
-              </a>
-            </NextLink>
+            <SocialIcon
+              style={{ marginBottom: 43, width: 48, height: 48 }}
+              url="https://www.instagram.com/blinktime.io"
+              network="instagram"
+              fgColor="#ffffff"
+              bgColor="red"
+            />
 
-            <NextLink href="https://www.facebook.com/my-saas-startup" passHref>
-              <a>
-                <FacebookIcon size={50} round={true} />
-              </a>
-            </NextLink>
-
-            <NextLink href="https://www.linkedin.com/my-saas-startup" passHref>
+            <NextLink href="https://www.linkedin.com/company/blinktime" passHref>
               <a>
                 <LinkedinIcon size={50} round={true} />
               </a>
             </NextLink>
           </ShareBar>
-          <Copyright>&copy; Copyright 2021 My Saas Startup</Copyright>
+          <Copyright>&copy; 2023 BlinkTime. All Rights Reserved.</Copyright>
         </BottomBar>
       </Container>
     </FooterWrapper>
